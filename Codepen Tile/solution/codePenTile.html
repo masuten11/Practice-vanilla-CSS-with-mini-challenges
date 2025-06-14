@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codepen Tile | By Masum Billah</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --font-family: "Noto Sans", sans-serif;
+      /* Colors to Use */
+      --bg-main: #131417;
+      --bg-cards: #121f26;
+      --bg-stats: #131417;
+      --username: #b7bbca;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-family);
+      min-height: 100vh;
+      background-color: var(--bg-main);
+      color: whitesmoke;
+      padding-top: 5%;
+      text-align: center;
+    }
+
+    .tile {
+      background-color: var(--bg-cards);
+      max-width: 350px;
+      padding: 1.3% 1.7%;
+      margin-inline: auto;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    #tile-banner {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .tile-details {
+      padding-inline: .4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .7rem;
+    }
+
+    #tile-dp {
+      max-height: 3rem;
+      width: auto;
+      border-radius: 7px;
+    }
+
+    .tile-details> div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    #project-title {
+      font-size: 1rem;
+    }
+
+    #user {
+      color: var(--username);
+      font-size: .73rem;
+    }
+
+    .tile-buttons {
+      display: none;
+      transition: all .3s ease-in-out;
+    }
+
+    /* Show the full tile on hover */
+    .tile:hover .tile-buttons {
+      padding-inline: 2.5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.7rem;
+    }
+
+    .tile-buttons> button {
+      background-color: var(--bg-stats);
+      color: whitesmoke;
+      padding: 0.33rem;
+      border: none;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3px;
+    }
+
+    .tile-buttons> button> img {
+      max-height: .9rem;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tile">
+    <img id="tile-banner" src="Media/tile-banner.jpg" alt="tile-banner(404)">
+    <div class="tile-details">
+      <img id="tile-dp" src="Media/tile-dp.jpg" alt="tile-dp(404)">
+      <div>
+        <h3 id="project-title">Abstract Gradient Project</h3>
+        <p id="user">Schemsbee Mcschemlee</p>
+      </div>
+    </div>
+
+    <div class="tile-buttons">
+      <button><img src="Media/heart-icon.png" alt="heart-icon(404)">8</button>
+      <button><img src="Media/message-icon.png" alt="message-icon(404)">33</button>
+    </div>
+  </div>
+</body>
+
+</html>

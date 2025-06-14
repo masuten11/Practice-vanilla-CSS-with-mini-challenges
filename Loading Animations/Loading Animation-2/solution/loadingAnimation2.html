@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Animation (Two) | By Masum Billah</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: whitesmoke;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loading-rectangle-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.7rem;
+    }
+
+    #loading-rectangle-one,
+    #loading-rectangle-two,
+    #loading-rectangle-three {
+      height: 2.6rem;
+      width: 2.6rem;
+      border-radius: 3.5px;
+      animation: loading-rectangle-animation 2s ease-in-out 100ms infinite forwards;
+    }
+
+    #loading-rectangle-one { background-color: hsl(7, 93%, 43%); }
+
+    #loading-rectangle-two { background-color: hsl(35, 93%, 43%); }
+
+    #loading-rectangle-three { background-color: hsl(230, 93%, 43%); }
+
+    /* Loading Animation */
+    @keyframes loading-rectangle-animation {
+      0% { transform: rotate(45deg); }
+      34% { transform: rotate(135deg); }
+      100% { transform: rotate(225deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loading-rectangle-container">
+    <div id="loading-rectangle-one"></div>
+    <div id="loading-rectangle-two"></div>
+    <div id="loading-rectangle-three"></div>
+  </div>
+</body>
+
+</html>

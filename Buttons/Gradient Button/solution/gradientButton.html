@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Button | By Masum Billah</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --font-family: "Karla", sans-serif; /* use this font*/
+      /* Colors */
+      --body-bg: hsl(231, 10%, 13%);
+      --btn-bg: hsl(0, 0%, 0%);
+      --btn-color: hsl(0, 0%, 87%);
+      --btn-color-hover: hsl(0, 0%, 97%);
+      --grad-color1: hsl(354, 81%, 65%);
+      --grad-color2: hsl(287, 82%, 28%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--body-bg);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #btt {
+      background-color: var(--btn-bg);
+      color: var(--btn-color);
+      font-family: var(--font-family);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: .23px;
+      padding: .75rem 1.25rem;
+      border-image: linear-gradient(115deg, var(--grad-color1), var(--grad-color2)) 2; /* use border-image to apply gradient bg*/
+      transition: all 0.25s ease-in; /* transition to all */
+    }
+
+    #btt:hover {
+      color: var(--btn-color-hover);
+      border-image: linear-gradient(-115deg, var(--grad-color1), var(--grad-color2)) 2;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btt">Start Coding!</button>
+</body>
+
+</html>

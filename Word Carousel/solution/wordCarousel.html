@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Carousel (CSS Only) | By Masum Billah</title>
+  <style>
+    :root {
+      /* Colors */
+      --text-color: black;
+      --dynamic-text-bg: hsl(255, 95%, 47%);
+      --dynamic-text-color: #FFF;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { font-size: 62.5%; } /* 1rem being set up as 10px */
+
+    body {
+      font-family: 'Lucida Grande', Verdana, sans-serif;
+      background-color: whitesmoke;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #text::after {
+      content: "READING";
+      background-color: var(--dynamic-text-bg);
+      color: var(--dynamic-text-color);
+      padding: .7rem .55rem;
+      margin-left: .5rem;
+      border-radius: 5px;
+      animation: looping-carousel 5s ease-in-out 100ms infinite forwards;
+    }
+
+    /* Animation to loop over different words */
+    @keyframes looping-carousel {
+      0% { content: "READING"; }
+      33.5% { content: "WRITING"; }
+      65.5% { content: "CODING"; }
+      100% { content: "ANIME"; }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="text">I LOVE</h1>
+</body>
+
+</html>

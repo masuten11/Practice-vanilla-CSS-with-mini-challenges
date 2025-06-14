@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flag of USA | By Masum Billah</title>
+  <style>
+    :root {
+      --flag-height: 25rem;
+      --flag-width: calc(var(--flag-height) * 1.9); /* in order to maintain aspect ratio */
+      /* Flag Colors */
+      --flag-bg: #FFF;
+      --flag-stripe: #B31942;
+      --flag-rectangle: #0A3161;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { font-size: 62.5%; } /* 1rem set to 10px */
+
+    body {
+      background-color: whitesmoke;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flag {
+      position: relative;
+      background-color: var(--flag-bg);
+      height: var(--flag-height);
+      width: var(--flag-width);
+      box-shadow: -1px 1px 3px 1.5px hsl(0, 0%, 0%, 0.3); /* add shadow for better vis/ibility */
+    }
+
+    .stripe {
+      background-color: var(--flag-stripe);
+      height: calc(60% / 7);
+      width: 100%;
+      position: absolute;
+      left: 0;
+    }
+
+    /* position wtih even gaps */
+    .stripe-1 { top: 0; }
+    .stripe-2 { top: calc(100% / 7 + 1%); }
+    .stripe-3 { top: calc((100% / 7 + 1%) * 2); }
+    .stripe-4 { top: calc((100% / 7 + 1%) * 3); }
+    .stripe-5 { top: calc((100% / 7 + 1%) * 4); }
+    .stripe-6 { top: calc((100% / 7 + 1%) * 5); }
+    .stripe-7 { top: calc((100% / 7 + 1%) * 6); }
+
+    .rectangle {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: var(--flag-rectangle);
+      height: 54.5%;
+      width: calc(54.5% * 0.815);
+      padding: 1.5%;
+      display: grid;
+      grid-template-rows: repeat(9, 1fr);
+      grid-template-columns: repeat(11, 1fr);
+      grid-template-areas:
+        "s1 . s2 . s3 . s4 . s5 . s6"
+        ". s7 . s8 . s9 . s10 . s11 ."
+        "s12 . s13 . s14 . s15 . s16 . s17"
+        ". s18 . s19 . s20 . s21 . s22 ."
+        "s23 . s24 . s25 . s26 . s27 . s28"
+        ". s29 . s30 . s31 . s32 . s33 ."
+        "s34 . s35 . s36 . s37 . s38 . s39"
+        ". s40 . s41 . s42 . s43 . s44 ."
+        "s45 . s46 . s47 . s48 . s49 . s50";
+      gap: 0;
+    }
+
+    .star {
+      background-color: var(--flag-bg);
+      width: 100%; /* size relative to the grid*/
+      height: 100%;
+      justify-self: center;
+      align-self: center;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* clip-path for star */
+    }
+
+    /* define grid-area */
+    .star-1 { grid-area: s1; }
+    .star-2 { grid-area: s2; }
+    .star-3 { grid-area: s3; }
+    .star-4 { grid-area: s4; }
+    .star-5 { grid-area: s5; }
+    .star-6 { grid-area: s6; }
+    .star-7 { grid-area: s7; }
+    .star-8 { grid-area: s8; }
+    .star-9 { grid-area: s9; }
+    .star-10 { grid-area: s10; }
+    .star-11 { grid-area: s11; }
+    .star-12 { grid-area: s12; }
+    .star-13 { grid-area: s13; }
+    .star-14 { grid-area: s14; }
+    .star-15 { grid-area: s15; }
+    .star-16 { grid-area: s16; }
+    .star-17 { grid-area: s17; }
+    .star-18 { grid-area: s18; }
+    .star-19 { grid-area: s19; }
+    .star-20 { grid-area: s20; }
+    .star-21 { grid-area: s21; }
+    .star-22 { grid-area: s22; }
+    .star-23 { grid-area: s23; }
+    .star-24 { grid-area: s24; }
+    .star-25 { grid-area: s25; }
+    .star-26 { grid-area: s26; }
+    .star-27 { grid-area: s27; }
+    .star-28 { grid-area: s28; }
+    .star-29 { grid-area: s29; }
+    .star-30 { grid-area: s30; }
+    .star-31 { grid-area: s31; }
+    .star-32 { grid-area: s32; }
+    .star-33 { grid-area: s33; }
+    .star-34 { grid-area: s34; }
+    .star-35 { grid-area: s35; }
+    .star-36 { grid-area: s36; }
+    .star-37 { grid-area: s37; }
+    .star-38 { grid-area: s38; }
+    .star-39 { grid-area: s39; }
+    .star-40 { grid-area: s40; }
+    .star-41 { grid-area: s41; }
+    .star-42 { grid-area: s42; }
+    .star-43 { grid-area: s43; }
+    .star-44 { grid-area: s44; }
+    .star-45 { grid-area: s45; }
+    .star-46 { grid-area: s46; }
+    .star-47 { grid-area: s47; }
+    .star-48 { grid-area: s48; }
+    .star-49 { grid-area: s49; }
+    .star-50 { grid-area: s50; }
+
+    /* Add responsiveness */
+    @media(width < 500px) {
+      :root {
+        --flag-height: 20rem;
+      }
+    }
+
+    @media(width < 390px) {
+      :root {
+        --flag-height: 15rem;
+      }
+    }
+
+    @media(width < 300px) {
+      :root {
+        --flag-height: 12rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flag">
+    <div class="stripe stripe-1"></div>
+    <div class="stripe stripe-2"></div>
+    <div class="stripe stripe-3"></div>
+    <div class="stripe stripe-4"></div>
+    <div class="stripe stripe-5"></div>
+    <div class="stripe stripe-6"></div>
+    <div class="stripe stripe-7"></div>
+
+    <div class="rectangle">
+      <div class="star star-1"></div>
+      <div class="star star-2"></div>
+      <div class="star star-3"></div>
+      <div class="star star-4"></div>
+      <div class="star star-5"></div>
+      <div class="star star-6"></div>
+      <div class="star star-7"></div>
+      <div class="star star-8"></div>
+      <div class="star star-9"></div>
+      <div class="star star-10"></div>
+      <div class="star star-11"></div>
+      <div class="star star-12"></div>
+      <div class="star star-13"></div>
+      <div class="star star-14"></div>
+      <div class="star star-15"></div>
+      <div class="star star-16"></div>
+      <div class="star star-17"></div>
+      <div class="star star-18"></div>
+      <div class="star star-19"></div>
+      <div class="star star-20"></div>
+      <div class="star star-21"></div>
+      <div class="star star-22"></div>
+      <div class="star star-23"></div>
+      <div class="star star-24"></div>
+      <div class="star star-25"></div>
+      <div class="star star-26"></div>
+      <div class="star star-27"></div>
+      <div class="star star-28"></div>
+      <div class="star star-29"></div>
+      <div class="star star-30"></div>
+      <div class="star star-31"></div>
+      <div class="star star-32"></div>
+      <div class="star star-33"></div>
+      <div class="star star-34"></div>
+      <div class="star star-35"></div>
+      <div class="star star-36"></div>
+      <div class="star star-37"></div>
+      <div class="star star-38"></div>
+      <div class="star star-39"></div>
+      <div class="star star-40"></div>
+      <div class="star star-41"></div>
+      <div class="star star-42"></div>
+      <div class="star star-43"></div>
+      <div class="star star-44"></div>
+      <div class="star star-45"></div>
+      <div class="star star-46"></div>
+      <div class="star star-47"></div>
+      <div class="star star-48"></div>
+      <div class="star star-49"></div>
+      <div class="star star-50"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Layout (Four of Hearts) | By Masum Billah</title>
+  <style>
+    :root {
+      --card-height: 33rem;
+      --card-width: calc(var(--card-height) * 0.667); /* adjust accondance with height */
+      --card-bg: hsl(0, 0%, 100%);
+      --card-items: hsl(7, 90%, 45%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { font-size: 62.5%; } /* 1rem set to 10px */
+
+    body {
+      font-family: sans-serif;
+      background-color: whitesmoke;
+      height: 100vh;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      color:var(--card-items);
+      height: var(--card-height);
+      width: var(--card-width);
+      padding: 1.7%;
+      border: 1.7px solid black;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-top, .card-bottom {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 17%;
+    }
+
+    .card-top> div:first-of-type, .card-bottom> div:first-of-type {
+      height: 100%;
+      font-size: 2.9rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .card-top> div:last-of-type, .card-bottom> div:last-of-type {
+      font-size: 4.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32%;
+      margin-top: 17.5%;
+    }
+
+    .card-bottom {
+      transform: rotate(180deg); /* rotate in order to match the layout */ 
+    }
+
+    @media (width < 330px) {
+      :root {
+        --card-height: 29rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="card-top">
+      <div>
+        <h3>4</h3>
+        <h3>&hearts;</h3>
+      </div>
+      <div>
+        <h3>&hearts;</h3>
+        <h3>&hearts;</h3>
+      </div>
+    </div>
+
+    <div class="card-bottom">
+      <div>
+        <h3>4</h3>
+        <h3>&hearts;</h3>
+      </div>
+      <div>
+        <h3>&hearts;</h3>
+        <h3>&hearts;</h3>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

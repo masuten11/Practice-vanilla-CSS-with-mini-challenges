@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Card Layout | By Masum Billah</title>
+  <style>
+    :root {
+      --bg-main: hsl(220, 65%, 88%);
+      --card-height: 25rem;
+      --card-width: calc(var(--card-height) * 1.6667); /* adjust according to the height */ 
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { font-size: 62.5%; } /* 1rem set to 10px */
+
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: var(--bg-main);
+      height: 100vh;
+      letter-spacing: .22px;
+      line-height: 1.65;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: var(--card-width);
+      height: var(--card-height);
+      padding: 3%;
+      color: white;
+      background-image: url("media/bg.png");
+      background-size: cover;
+      background-position: center;
+      border-radius: 21px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .card-top {
+      width: 100%;
+      padding-top: 2%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-top> div {
+      font-size: 1.83rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+    }
+
+    .card-top> div> img {
+      max-height: 3.5rem;
+      width: auto;
+    }
+
+    .card-top>img {
+      max-width: 6.5rem;
+      height: auto;
+    }
+
+    .card-bottom {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1.7%;
+    }
+
+    .card-bottom h3 { font-size: 1.77rem; }
+
+    .card-bottom { font-size: 1.37rem; }
+
+    .card-bottom> div:first-of-type {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .card-bottom> div:last-of-type {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    /* Add Responsiveness */
+    @media (width < 440px) {
+      :root {
+         --card-height: 21rem;
+      }
+    }
+
+    @media (width < 365px) {
+      :root {
+         --card-height: 16rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="card-top">
+      <div>
+        <img src="media/logo.png" alt="logo(404)">
+        <h3>Master Card</h3>
+      </div>
+      <img src="media/chip.png" alt="chip-icon(404)">
+    </div>
+
+    <div class="card-bottom">
+      <div>
+        <p>Card Number</p>
+        <h3>8050 5041 2074 7732</h3>
+      </div>
+      <div>
+        <h3>Masum Billah Eiad</h3>
+        <div>
+          <p>Valid Thrus</p>
+          <h3>05/19</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

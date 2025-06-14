@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flag of Germany | By Masum Billah</title>
+  <style>
+    :root {
+      --flag-height: 25rem;
+      --flag-width: calc(var(--flag-height) * 1.67); /* in order to maintain aspect ratio */
+      /* Flag Colors */
+      --color-flag-top: #000;
+      --color-flag-mid: #D00;
+      --color-flag-bottom: #FC0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { font-size: 62.5%; } /* 1rem set to 10px */
+
+    body {
+      background-color: whitesmoke;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flag {
+      position: relative;
+      height: var(--flag-height);
+      width: var(--flag-width);
+      box-shadow: -1.5px 1px 3px 1px hsl(0, 0%, 0%, 0.3); /* add shadow for better vis/ibility */
+    }
+
+    .flag div {
+      position: absolute;
+      left: 0;
+      width: 100%;
+    }
+
+    .flag-top {
+      background-color: var(--color-flag-top);
+      height: 33.2%;
+      top: 0;
+    }
+
+    .flag-mid {
+      background-color: var(--color-flag-mid);
+      height: 33.3%;
+      top: 33.2%;
+    }
+
+    .flag-bottom {
+      background-color: var(--color-flag-bottom);
+      height: 33.5%;
+      top: calc(33.2% + 33.3%); /* top + mid */
+    }
+
+    /* Add responsiveness */
+    @media(width < 450px) {
+      :root {
+        --flag-height: 21rem;
+      }
+    }
+
+    @media(width < 380px) {
+      :root {
+        --flag-height: 16rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flag">
+    <div class="flag-top"></div>
+    <div class="flag-mid"></div>
+    <div class="flag-bottom"></div>
+  </div>
+</body>
+
+</html>

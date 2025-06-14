@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flag of Madagascar | By Masum Billah</title>
+  <style>
+    :root {
+      --flag-height: 26rem;
+      --flag-width: calc(var(--flag-height) * 1.5); /* in order to maintain aspect ratio */
+      /* Flag Colors */
+      --flag-slice-one: #FFF;
+      --flag-slice-two: #FC3D32;
+      --flag-slice-three: #007E3A;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      background-color: whitesmoke;
+      height: 100vh;
+      line-height: 1.65;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flag {
+      position: relative;
+      height: var(--flag-height);
+      width: var(--flag-width);
+      box-shadow: -1px 1px 3px 1.5px hsl(0, 0%, 0%, 0.3); /* add shadow for better vis/ibility */
+    }
+
+    .flag-slice {
+      position: absolute;
+      height: 50%;
+    }
+
+    .slice-one {
+      left: 0;
+      top: 0;
+      z-index: 2;
+      width: calc(100% / 1.5);
+      background-color: var(--flag-slice-one);
+      transform: rotate(90deg) translate(calc(100% / 4), calc(100% / 2));
+    }
+
+    .slice-two {
+      right: 0;
+      top: 0;
+      width: 100%;
+      background-color: var(--flag-slice-two);
+    }
+
+    .slice-three {
+      right: 0;
+      top: 50%;
+      width: 100%;
+      background-color: var(--flag-slice-three);
+    }
+
+    /* Add Responsiveness */
+    @media(width < 430px) {
+      :root {
+        --flag-height: 21rem;
+      }
+    }
+
+    @media(width < 340px) {
+      :root {
+        --flag-height: 17rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flag">
+    <div class="flag-slice slice-one"></div>
+    <div class="flag-slice slice-two"></div>
+    <div class="flag-slice slice-three"></div>
+  </div>
+</body>
+
+</html>

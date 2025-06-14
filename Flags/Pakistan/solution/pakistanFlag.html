@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flag of Pakistan | By Masum Billah</title>
+  <style>
+    :root {
+      --flag-height: 25rem;
+      --flag-width: calc(var(--flag-height) * 1.6); /* in order to maintain aspect ratio */
+      /* Flag Colors */
+      --flag-bg: #003F15;
+      --flag-shapes: #FFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { font-size: 62.5%; } /* 1rem set to 10px */
+
+    body {
+      background-color: whitesmoke;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flag {
+      position: relative;
+      background-color: var(--flag-bg);
+      height: var(--flag-height);
+      width: var(--flag-width);
+      box-shadow: -1px 1px 3.5px 2px hsl(0, 0%, 0%, 0.35); /* add shadow for better vis/ibility */
+    }
+
+    .rectangle,
+    .crescent,
+    .star {
+      position: absolute;
+      background-color: var(--flag-shapes);
+    }
+
+    .rectangle {
+      background-color: var(--flag-shapes);
+      width: 20%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .crescent {
+      position: relative;
+      background-color: var(--flag-shapes);
+      height: 68%;
+      width: calc(68% / 1.6);
+      border-radius: 50%;
+      left: 42%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .crescent::after {
+      content: "";
+      background-color: var(--flag-bg);
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      position: absolute;
+      left: 14.5%;
+      top: -9%;
+    }
+
+    .star {
+      background-color: var(--flag-shapes);
+      height: 12%;
+      width: 10%;
+      top: 28.5%;
+      left: 64%;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* clip path for the star(5 pointed) */
+      transform: rotate(-90deg);
+    }
+
+    /* Add responsiveness */
+    @media(width < 435px) {
+      :root {
+        --flag-height: 20.5rem;
+      }
+    }
+
+    @media(width < 320px) {
+      :root {
+        --flag-height: 14.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flag">
+    <div class="rectangle"></div>
+    <div class="crescent"></div>
+    <div class="star"></div>
+  </div>
+</body>
+
+</html>

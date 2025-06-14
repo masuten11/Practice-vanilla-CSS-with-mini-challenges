@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expanding Search Bar | By Masum Billah</title>
+  <style>
+    :root {
+      --search-border: #bbb;
+      --search-border-focus: #3a71ca;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: whitesmoke;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .searchBarContainer {
+      width: 100%;
+      padding: 7% 21%; /* responsive padding */
+      margin-inline: auto;
+      text-align: start;
+    }
+
+    input[id="searchBar"] {
+      width: 40%;
+      padding: 1.2rem;
+      border: 1.7px solid var(--search-border);
+      border-radius: 5px;
+      transition: all .3s ease-out;
+    }
+
+    input[id="searchBar"]:focus {
+      width: 100%;
+      outline: 2px solid var(--search-border-focus);
+      box-shadow: none;
+    }
+
+    input[id="searchBar"]:focus::placeholder {
+      color: transparent;
+    }
+
+    /* Add Responsiveness */
+    @media (width < 455px) {
+      .searchBarContainer {
+        padding: 11% 15%;
+      }
+    }
+
+    @media (width < 950px) {
+      input[id="searchBar"] {
+        width: 55%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="searchBarContainer">
+    <label for="searchBar"></label>
+    <input type="text" name="searchBar" id="searchBar" placeholder="Search..." required>
+  </div>
+
+</body>
+
+</html>
