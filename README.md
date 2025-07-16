@@ -1,8 +1,9 @@
 # 🎯 Practice Vanilla CSS
 
 A growing collection of beginner-friendly HTML & CSS mini challenges.
-
----
+<div align="start">
+  <img src="public/CSSLogo.jpg" width="270" height="auto" alt="CSS(404)">
+</div>
 
 ## 👤 Who is this repo for?
 
