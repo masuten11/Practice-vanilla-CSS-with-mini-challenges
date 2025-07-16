@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Bar | By Masum Billah</title>
+  <style>
+    :root {
+      --bar-height: 4rem;
+      --bar-width: 60rem; /* adjust if needed */
+      /* Colors */
+      --bar-bg-color: #768798;
+      --bar-color-low: #cc0000;
+      --bar-color-high: #e4e401;
+      --bar-color-optimum: #069406;
+      /* Animation */
+      --animation-duration: 3s;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { font-size: 62.5%; } /* 1rem set to 10px */
+
+    body {
+      background-color: whitesmoke;
+      height: 100vh;
+      padding-inline: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .progress-bar {
+      position: relative;
+      background-color: var(--bar-bg-color);
+      width: var(--bar-width);
+      height: var(--bar-height);
+      border-radius: 1.7rem;
+    }
+
+    .progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: red;
+      height: 100%;
+      border-radius: 1.7rem;
+      animation: progress-bar-animation var(--animation-duration) ease-in-out infinite forwards;
+    }
+
+    /* Progess Animation */
+    @keyframes progress-bar-animation {
+      0% { background-color: var(--bar-color-low); width: 0%; }
+      10% { background-color: var(--bar-color-low); width: 10%; }
+      20% { background-color: var(--bar-color-low); width: 20%; }
+      30% { background-color: var(--bar-color-high); width: 30%; }
+      40% { background-color: var(--bar-color-high); width: 40%; }
+      50% { background-color: var(--bar-color-high); width: 50%; }
+      60% { background-color: var(--bar-color-high); width: 60%; }
+      70% { background-color: var(--bar-color-high);; width: 70%; }
+      80% { background-color: var(--bar-color-optimum); width: 80%; }
+      90% { background-color: var(--bar-color-optimum); width: 90%; }
+      100% { background-color: var(--bar-color-optimum); width: 100%; }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+</body>
+
+</html>

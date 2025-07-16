@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Animation (Three) | By Masum Billah</title>
+  <style>
+    :root {
+      --loading-circle-size: 11rem; /* same height and width */
+      --loading-dash-color: red;
+      --loading-animation-duration: 2.35s;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%; /* 1rem set to 10px */
+    }
+
+    body {
+      background-color: whitesmoke;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #loading-circle {
+      position: relative;
+      height: var(--loading-circle-size);
+      width: var(--loading-circle-size);
+      border-radius: 50%;
+      border: dashed var(--loading-dash-color);
+      animation: loading-circle-animation var(--loading-animation-duration) ease-out .3s forwards infinite; /* apply animation*/
+    }
+
+    @keyframes loading-circle-animation {
+      0% {
+        border-width: 1.25rem 0 0 0;
+      }
+
+      34% {
+        border-width: 0 1.25rem 0 0;
+      }
+
+      67% {
+        border-width: 0 0 1.25rem 0;
+      }
+
+      100% {
+        border-width: 0 0 0 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading-circle"></div>
+</body>
+
+</html>
